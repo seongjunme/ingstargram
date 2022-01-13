@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname + '/build'),
@@ -34,10 +34,11 @@ module.exports = {
   },
   devServer: {
     port: 5000,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: './src/index.html',
     }),
   ],
 };

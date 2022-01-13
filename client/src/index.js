@@ -1,4 +1,4 @@
-import Header from './header';
+import { render } from './router';
 
-const $App = document.querySelector('#App');
-Header({ $target: $App, initialState: null });
+window.addEventListener('popstate', () => render());
+render();
